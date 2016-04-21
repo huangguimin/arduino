@@ -89,6 +89,13 @@ void serialEvent1() {
         state++;
       outputString = "";
     }
+    else if(outChar == '!')
+    {
+      Serial.println(outputString);
+      if(outputString == "{\"method\":\"send\",\"gatewayNo\":\"01\",\"userkey\":\"85be7b17d02346e981d5d4a48e3d8453\",\"f\":\"getAllSensors\"}&^!")
+      {Serial.println("ctrul");}
+      outputString = "";
+    }
   }
 }
 /*
